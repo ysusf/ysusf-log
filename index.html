@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="pages">
+      <div id="LoginPage" class="bg-dark min-vh-100 p-5">
+        <div
+          class="w-75 mx-auto p-4 shadow-lg text-light text-center border border-3 border-dark rounded-3"
+        >
+          <h1 class="text-primary my-4 fw-bold">Smart Login System</h1>
+          <!-- **** UserName Input ****  -->
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="form-control my-3 d-none"
+            id="nameInput"
+          />
+          <div
+            id="invalidName"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-3 d-none"
+          >
+            <p class="fw-semibold mb-0">Invaild Name</p>
+            <ul class="ul-adj">
+              <li>The name must start with a letter or underscore.</li>
+              <li>The name must contain at least 5 characters.</li>
+              <li>
+                The username can contain any combination of letters, numbers,
+                and underscores.
+              </li>
+              <li>The name must end with a letter or a number.</li>
+            </ul>
+          </div>
+          <div
+            id="existName"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-2 d-none my-3"
+          >
+            <p class="fw-semibold mb-0">User name already exists.</p>
+          </div>
+          <!-- **** Email Input ****  -->
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="form-control my-3"
+            id="emailInput"
+          />
+          <div
+            id="invalidEmail"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-3 d-none"
+          >
+            <p class="fw-semibold mb-0">Invaild Email Address</p>
+            <ul class="ul-adj">
+              <li>
+                The email address must start with a word character
+                (alphanumeric, underscore, or hyphen).
+              </li>
+              <li>
+                The email address can then contain any number of word
+                characters, separated by periods or hyphens.
+              </li>
+              <li>The email address must contain an &#64; symbol.</li>
+              <li>
+                After the &#64; symbol, the email address must contain another
+                word character, followed by any number of word characters,
+                separated by periods or hyphens.
+              </li>
+              <li>
+                The email address must end with a two- or three-letter domain
+                name.
+              </li>
+            </ul>
+          </div>
+          <div
+            id="existEmail"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-2 d-none my-3"
+          >
+            <p class="fw-semibold mb-0">User email already exists.</p>
+          </div>
+          <!-- **** Password Input ****  -->
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="form-control my-3"
+            id="passwordInput"
+          />
+          <div
+            id="invalidPass"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-3 mb-3 d-none"
+          >
+            <p class="fw-semibold mb-0">Invaild Password</p>
+            <ul class="ul-adj">
+              <li>
+                The password must be at least 6 characters long and no more than
+                20 characters long.
+              </li>
+              <li>
+                The password must contain at least one digit, one lowercase
+                letter, and one uppercase letter.
+              </li>
+              <li>
+                The password cannot be all numbers, all lowercase letters, or
+                all uppercase letters.
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="btn btn-outline-primary w-100 mb-3 d-block"
+            id="loginBtn"
+          >
+            Login
+          </button>
+          <div
+            id="wrongPassEmail"
+            class="text-start small border border-2 border-danger rounded-2 text-danger p-2 mb-2 d-none"
+          >
+            <p class="fw-semibold mb-0">Wrong Email or Password</p>
+          </div>
+          <p>
+            Don’t have an account&nbsp;&#63;&nbsp;
+            <a href="#" class="text-decoration-none text-light" id="signUpLink"
+              >Sign up</a
+            >
+          </p>
+        </div>
+      </div>
+      <div id="homePage" class="position-fixed top-0 w-100 zindex-negative">
+        <div class="home-content min-vh-100 bg-light position-relative">
+          <button
+            id="logoutBtn"
+            class="btn btn-outline-danger position-fixed fixed-adj"
+          >
+            Log out
+          </button>
+          <div class="w-75 position-absolute position-adj50">
+            <p
+              class="display-4 fw-semibold text-center text-uppercase text-danger mb-0 mx-auto w-fit letter-space4 fst-italic"
+            >
+              welcome,&nbsp;<span
+                id="welcomeName"
+                class="display-3 fw-semibold d-block bg-danger text-light p-2 mt-2"
+                >successful Login</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
